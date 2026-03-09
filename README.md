@@ -1,7 +1,7 @@
 # 🤖 Hanako-kun Bot
 
 **Desenvolvido por:** Rei Ayanami (FuriaDaNoiteBR)  
-**Versão:** 3.2.0  
+**Versão:** 5.0.0  
 **Linguagem:** JavaScript (Node.js / Bun)
 
 Hanako-kun é um bot de WhatsApp com foco em estabilidade e recursos (schedulers, banco SQLite, hot reload e integrações). O projeto usa Baileys para conexão com o WhatsApp e carrega comandos automaticamente a partir de `lib/commands`.
