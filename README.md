@@ -8,17 +8,17 @@ Hanako-kun é um bot de WhatsApp com foco em estabilidade e recursos (schedulers
 
 ## ✅ Números verificados deste repositório
 
-- **Arquivos de comandos:** 399 arquivos `.js` em `lib/commands` (cada comando pode ter aliases, então o total de gatilhos pode ser maior)
-- **Categorias de comandos:** 17 pastas/categorias em `lib/commands`
+- **Arquivos de comandos:** 379 arquivos `.js` em `lib/commands` (cada comando pode ter aliases, então o total de gatilhos pode ser maior)
+- **Categorias de comandos:** 15 pastas/categorias em `lib/commands`
 - **Bancos SQLite (arquivos):** 63 arquivos `.db` em `data/DB` (fora os arquivos `.db-wal` e `.db-shm`)
 
-## � Requisitos
+## 📦 Requisitos
 
 - Node.js (recomendado para produção) ou Bun
 - Dependências nativas importantes do projeto: `better-sqlite3`, `sharp`, `@napi-rs/canvas`
 - FFmpeg/FFprobe são usados via `@ffmpeg-installer/ffmpeg` e `@ffprobe-installer/ffprobe`
 
-## � Como rodar
+## 🚀 Como rodar
 
 ### 1) Instalar dependências
 
@@ -36,11 +36,12 @@ bun install
 
 Copie `.env.example` para `.env` e substitua os valores. Variáveis encontradas no código hoje:
 
-- **Geral/paths:** `DB_PATH`, `GITHUB_BACKUP_REMOTE`, `GITHUB_BACKUP_AUTHOR_NAME`, `GITHUB_BACKUP_AUTHOR_EMAIL`
-- **YouTube/serviços:** `TENOR_API_KEY`, `TMDB_API_KEY`
-- **STT/Transcrição:** `ASSEMBLYAI_API_KEY` (ou `ASSEMBLYAI_TOKEN`/`ASSEMBLYAI_KEY`), `STTV3_*`, `WHISPER_API_URL`
-- **Anti-bot/anti-delete:** `ANTIBOT*`, `ANTIDELETE*`
-- **Outros:** `EVENTOLOGS`, `OWNER_GROUP_JID`, `BRAWL_KEY_ROTATION`, `ANTIGROUPS_ALLOWLIST`
+- **Geral/paths:** `DB_PATH`
+- **Backup GitHub (opcional):** `BACKUP_FILTER`, `GITHUB_BACKUP_REMOTE`, `GITHUB_DELAYHOURS`, `GITHUB_RETRYMINUTES`, `GITHUB_NOTIFIER`, `GITHUB_AUTHORNAME`, `GITHUB_AUTHOREMAIL`
+- **Serviços/APIs:** `TENOR_API_KEY`, `TMDB_API_KEY`, `GEMINI_API_KEY`, `MERCADO_PAGO_ACCESS_TOKEN`, `BRAWL_KEY_ROTATION`
+- **STT/Transcrição:** `ASSEMBLYAI_API_KEY`, `STTV3_*`
+- **Segurança/moderação:** `ANTIBOT`/`ANTIBOT_DEBUG`, `ANTIDELETE_DEBUG`, `ANTIDELETE_DEBUG_CHAT`, `ANTIGROUPS_ALLOWLIST`
+- **Outros:** `EVENTOLOGS`
 
 ### 3) Ajustar configurações do bot
 
@@ -80,7 +81,7 @@ npm run dev:bun
 - Para listar comandos no WhatsApp: use `menu` (ex.: `/menu` ou `!menu`). Para filtrar por categoria: `menu <categoria>`. Para mostrar aliases: `menu <categoria> -aliases`.
 - Alguns comandos são protegidos por flags como `ownerOnly`, `adminOnly`, `groupOnly`, `subOwnerOnly` e afins.
 
-## � Fluxo de inicialização (index.js)
+## 🧠 Fluxo de inicialização (index.js)
 
 - Carrega dotenv e configura locale/timezone.
 - Carrega Baileys dinamicamente (`lib/utils/baileysLoader`).
@@ -88,27 +89,25 @@ npm run dev:bun
 - Abre o socket WhatsApp e registra listeners (QR no terminal e processamento de mensagens).
 - Inicializa serviços e schedulers (banco, evento, YouTube notifier, etc.).
 
-## ��️ Categorias e total de comandos (arquivos)
+## 🗂️ Categorias e total de comandos (arquivos)
 
-Total: **399**
+Total: **379**
 
-- Diversao: 80
-- Dono: 50
 - Admin: 38
-- Supercell: 38
+- IA (ai): 15
 - Dados: 35
-- Games: 35
-- Download: 23
-- Utilitarios: 22
-- VIP: 16
-- IA: 15
-- MC: 13
+- Diversao: 81
+- Dono: 46
+- Download: 24
 - Economy: 8
+- Events: 4
+- Games: 32
 - Geral: 7
 - Sticker: 7
+- Supercell: 38
+- Utilitarios: 22
+- VIP: 15
 - YouTube: 7
-- Events: 4
-- CR: 1
 
 ## 📁 Estrutura do projeto (resumo)
 
