@@ -1,154 +1,212 @@
-# 🤖 Hanako-kun Bot
+# Megumin Bot
 
-**Desenvolvido por:** Rei Ayanami (FuriaDaNoiteBR)  
-**Versão:** 5.0.0  
-**Linguagem:** JavaScript (Node.js / Bun)
+Bot de WhatsApp construído com Baileys, foco em comandos modulares, banco SQLite, automações internas, sistema VIP, integrações externas e utilitários para grupos e conversas privadas.
 
-Hanako-kun é um bot de WhatsApp com foco em estabilidade e recursos (schedulers, banco SQLite, hot reload e integrações). O projeto usa Baileys para conexão com o WhatsApp e carrega comandos automaticamente a partir de `lib/commands`.
+## Créditos
 
-## ✅ Números verificados deste repositório
+Créditos do projeto: **Rei Ayanami**.
 
-- **Arquivos de comandos:** 379 arquivos `.js` em `lib/commands` (cada comando pode ter aliases, então o total de gatilhos pode ser maior)
-- **Categorias de comandos:** 15 pastas/categorias em `lib/commands`
-- **Bancos SQLite (arquivos):** 63 arquivos `.db` em `data/DB` (fora os arquivos `.db-wal` e `.db-shm`)
+## Estado atual deste repositório
 
-## 📦 Requisitos
+Esta revisão foi baseada na estrutura real do código presente hoje no repositório:
 
-- Node.js (recomendado para produção) ou Bun
-- Dependências nativas importantes do projeto: `better-sqlite3`, `sharp`, `@napi-rs/canvas`
-- FFmpeg/FFprobe são usados via `@ffmpeg-installer/ffmpeg` e `@ffprobe-installer/ffprobe`
+- `409` arquivos `.js` dentro de `lib/commands`
+- `16` categorias de comandos: `admin`, `ai`, `casamentos`, `dados`, `diversao`, `dono`, `download`, `economy`, `events`, `games`, `geral`, `sticker`, `supercell`, `utilitarios`, `vip` e `youtube`
+- `53` módulos `.js` em `lib/database`
+- `13` schedulers em `lib/schedulers`
+- `3` handlers principais em `lib/handlers`
 
-## 🚀 Como rodar
+## Novidades da versão 3.4.0
 
-### 1) Instalar dependências
+- Gerenciamento de presence com timeout em `lib/utils/presenceManager.js`, usando `sendWithTimeout(...)` para evitar que atualizações de typing/recording travem comandos
+- Novo comando `/label` para administradores alterarem ou removerem a etiqueta do bot no grupo atual, com validação de entrada e suporte aos modos `auto`, `off` e texto personalizado
+- Novo comando `/newsletters` para inspecionar, depurar e administrar canais/newsletters, incluindo rename, description, reaction e leitura de metadados
+- Novo comando `/story` na categoria `dono` usando os métodos nativos de status/story do socket para texto, imagem, menções e envio para membros de grupos
+- Novo utilitário `lib/utils/eventLogs.js` para centralizar logs de ações e falhas no `EVENTOLOGS`
+- Melhorias em `monitoredDelivery` para fallback, aviso ao dono e tratamento de destinos inválidos
+- Novo utilitário `lib/utils/richTableSender.js` para respostas formatadas com rich table quando a configuração permitir
+- Anti-call refinado com bloqueio temporário automático após `3/3` tentativas dentro da janela configurada
+- Atualização da versão do projeto para `3.4.0` com dependências e scripts alinhados ao estado atual do repositório
+
+## Principais recursos
+
+- Carregamento automático de comandos a partir de `lib/commands`
+- Suporte a aliases, cooldown, sugestão de comandos parecidos e filtros por grupo
+- Banco de dados SQLite com compatibilidade para Node.js (`better-sqlite3`) e Bun (`bun:sqlite`)
+- Sessão do WhatsApp via SQLite ou multi-file auth state
+- Hot reload em desenvolvimento
+- Sistema VIP com níveis, regras por comando/categoria e painel dinâmico
+- Schedulers para pagamentos, banco, tempo de grupo, backup, eventos, daily e integrações Supercell
+- Notificador de YouTube com janela de silêncio configurável
+- Integração com Mercado Pago
+- UNO Web com servidor Express próprio
+- Comandos nativos para etiqueta do bot em grupos e publicação de status/story
+- Ferramentas para newsletters, rich tables e monitoramento centralizado de eventos
+- Recursos de segurança, anti-delete, anti-link, anti-call e proteção para grupos
+
+## Arquitetura resumida
+
+- `index.js`
+  Ponto de entrada do bot. Inicializa diretórios, carrega Baileys, autenticação, handlers, schedulers, serviços e reinício controlado.
+
+- `lib/handlers/commandHandler.js`
+  Faz o carregamento recursivo dos comandos, normaliza nomes e aliases, aplica cooldown, filtro por categoria, restrições VIP e executa os comandos.
+
+- `lib/handlers/messageHandler.js`
+  Centraliza leitura de mensagens, extração de mídia, proteção, eventos de grupo, menções, anti-delete, estatísticas e despacho para o command handler.
+
+- `lib/database/sqlite.js`
+  Camada de abstração para usar SQLite com Node.js ou Bun.
+
+- `lib/database/vipDB.js`
+  Controla usuários VIP, histórico, regras por feature/comando/categoria e o painel dinâmico do sistema premium.
+
+- `lib/services`
+  Contém integrações de runtime como `youtubeNotifier`, `mercadoPagoService`, `brawlClient` e `unoWebServer`.
+
+- `lib/schedulers`
+  Reúne tarefas automáticas como backup GitHub/local, pagamentos, eventos, daily, banco, YouTube e monitoramento da API do Brawl Stars.
+
+## Estrutura principal
+
+```text
+.
+├── config/
+├── data/
+├── databases_repo/
+├── lib/
+│   ├── commands/
+│   ├── database/
+│   ├── handlers/
+│   ├── schedulers/
+│   ├── security/
+│   ├── services/
+│   └── utils/
+├── backup.js
+├── index.js
+└── package.json
+```
+
+## Requisitos
+
+- Node.js para produção
+- Bun opcional
+- FFmpeg e FFprobe disponíveis no ambiente
+- Dependências nativas importantes: `better-sqlite3`, `sharp` e `@napi-rs/canvas`
+
+## Instalação
+
+### 1. Instalar dependências
 
 ```bash
 npm install
 ```
 
-Opcional (Bun):
+Opcional com Bun:
 
 ```bash
 bun install
 ```
 
-### 2) Configurar `.env`
+### 2. Configurar variáveis de ambiente
 
-Copie `.env.example` para `.env` e substitua os valores. Variáveis encontradas no código hoje:
+Copie `.env.example` para `.env` e ajuste os valores necessários.
 
-- **Geral/paths:** `DB_PATH`
-- **Backup GitHub (opcional):** `BACKUP_FILTER`, `GITHUB_BACKUP_REMOTE`, `GITHUB_DELAYHOURS`, `GITHUB_RETRYMINUTES`, `GITHUB_NOTIFIER`, `GITHUB_AUTHORNAME`, `GITHUB_AUTHOREMAIL`
-- **Serviços/APIs:** `TENOR_API_KEY`, `TMDB_API_KEY`, `GEMINI_API_KEY`, `MERCADO_PAGO_ACCESS_TOKEN`, `BRAWL_KEY_ROTATION`
-- **STT/Transcrição:** `ASSEMBLYAI_API_KEY`, `STTV3_*`
-- **Segurança/moderação:** `ANTIBOT`/`ANTIBOT_DEBUG`, `ANTIDELETE_DEBUG`, `ANTIDELETE_DEBUG_CHAT`, `ANTIGROUPS_ALLOWLIST`
-- **Outros:** `EVENTOLOGS`
+Variáveis importantes já documentadas no projeto:
 
-### 3) Ajustar configurações do bot
+- `DB_PATH`
+- `GEMINI_API_KEY`
+- `TENOR_API_KEY`
+- `TMDB_API_KEY`
+- `ASSEMBLYAI_API_KEY`
+- `EVENTOLOGS`
+- `BACKUP_FILTER`
+- `GITHUB_NOTIFIER`
+- `GITHUB_AUTHORNAME`
+- `GITHUB_AUTHOREMAIL`
+- `GITHUB_DELAYHOURS`
+- `GITHUB_RETRYMINUTES`
+- `GITHUB_BACKUP_REMOTE`
+- `MERCADO_PAGO_ACCESS_TOKEN`
 
-Arquivo: `config/config.js`
+Observação: parte das configurações operacionais também fica em `config/config.js`, incluindo prefixos, donos, sessão, manutenção, sistema de botões, anti-call, anti-link, YouTube notifier, registro, UNO Web e mensagens padrão.
 
-- Prefixos (padrão): `['!', '/', '.', '#', '>', '$', '%', '&', '*', '~']`
-- Dono(s): `ownerNumber`, `ownerLid`
-- Pairing Code (opcional): `pairingCode.enabled`, `pairingCode.phoneNumber`
-- Backup GitHub (opcional): `backup.github.enabled` + `GITHUB_BACKUP_REMOTE`
+## Destaques operacionais
 
-### 4) Iniciar
+- `/label`
+  Comando administrativo para alterar a etiqueta do bot no grupo atual usando `sock.updateMemberLabel(groupJid, label)`. O projeto valida uso em grupo, limita o texto ao comportamento do WhatsApp e envia monitoramento da ação para `EVENTOLOGS`.
 
-Node:
+- `/newsletters`
+  Comando administrativo para gerenciamento e debug de canais/newsletters com leitura de metadados, listagem de inscrições, rename, atualização de descrição, reação em mensagens e remoção de foto.
+
+- `/story`
+  Comando da categoria `dono` para publicar status/story com `sendMessage('status@broadcast', ...)`, `sendStatusMentions(...)` e `sendGroupStatus(...)`. Suporta texto, imagem por URL, envio por audiência manual e envio para membros de grupos.
+
+- Etiquetas e histórico
+    expõe `updateMemberLabel`, mas não traz uma listagem simples das etiquetas atuais no `groupMetadata`. Por isso, o projeto mantém histórico em `lib/database/labelDB.js` a partir dos eventos `GROUP_MEMBER_LABEL_CHANGE`.
+
+- Presence
+  O socket suporta `sendPresenceUpdate(...)` e `presenceSubscribe(...)`, e o projeto já inclui o wrapper `lib/utils/presenceManager.js` para controlar `composing`, `recording` e `paused`.
+
+- Rich tables e logs
+  O projeto inclui `lib/utils/richTableSender.js` para respostas em tabela formatada e `lib/utils/eventLogs.js` para concentrar logs operacionais, erros e fallback de envio ao `EVENTOLOGS`.
+
+### 3. Iniciar o bot
 
 ```bash
 npm start
 ```
 
-Modo desenvolvimento (watch do Node):
+Modo desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Bun:
+Com Bun:
 
 ```bash
 npm run start:bun
-npm run dev:bun
 ```
 
-## 🧩 Como os comandos funcionam
+## Scripts disponíveis
 
-- O loader varre `lib/commands` recursivamente e registra cada módulo `.js` pelo `name` e `aliases`.
-- O parse de comando usa os `prefixes` do `config/config.js`.
-- Dispatcher principal: `messages.upsert` → `MessageHandler` → `CommandHandler.execute(...)`.
-- Para listar comandos no WhatsApp: use `menu` (ex.: `/menu` ou `!menu`). Para filtrar por categoria: `menu <categoria>`. Para mostrar aliases: `menu <categoria> -aliases`.
-- Alguns comandos são protegidos por flags como `ownerOnly`, `adminOnly`, `groupOnly`, `subOwnerOnly` e afins.
+- `npm start` inicia o bot com Node.js
+- `npm run dev` inicia com `node --watch`
+- `npm run start:bun` inicia com Bun
+- `npm run dev:bun` inicia em watch mode com Bun
+- `npm run lint` executa o ESLint
+- `npm run lint:fix` corrige problemas automáticos do ESLint
+- `npm run lint:check` falha se houver warnings
 
-## 🧠 Fluxo de inicialização (index.js)
+## Como os comandos são organizados
 
-- Carrega dotenv e configura locale/timezone.
-- Carrega Baileys dinamicamente (`lib/utils/baileysLoader`).
-- Cria/usa sessão multi-arquivo em `data/sessions`.
-- Abre o socket WhatsApp e registra listeners (QR no terminal e processamento de mensagens).
-- Inicializa serviços e schedulers (banco, evento, YouTube notifier, etc.).
+Cada comando é exportado como um módulo CommonJS e carregado automaticamente pelo handler.
 
-## 🗂️ Categorias e total de comandos (arquivos)
+Exemplo simplificado:
 
-Total: **379**
+```js
+module.exports = {
+  name: 'ping',
+  description: 'Verificar latência e informações do bot',
+  category: 'utilitarios',
+  aliases: ['latencia', 'p'],
 
-- Admin: 38
-- IA (ai): 15
-- Dados: 35
-- Diversao: 81
-- Dono: 46
-- Download: 24
-- Economy: 8
-- Events: 4
-- Games: 32
-- Geral: 7
-- Sticker: 7
-- Supercell: 38
-- Utilitarios: 22
-- VIP: 15
-- YouTube: 7
-
-## 📁 Estrutura do projeto (resumo)
-
-```
-hanakokun/
-├── config/                 # Config principal do bot (prefixos, owners, flags)
-├── data/                   # DBs SQLite, assets e dados do bot
-├── lib/
-│   ├── commands/           # Comandos (carregados automaticamente)
-│   ├── database/           # Camada de acesso aos DBs
-│   ├── handlers/           # Handlers de mensagem/comando
-│   ├── schedulers/         # Jobs (banco, eventos, pagamentos etc.)
-│   ├── security/           # Gate/Watcher
-│   ├── services/           # Integrações (YouTube, MercadoPago, etc.)
-│   └── utils/              # Utilitários
-├── .env.example
-├── backup.js
-├── crash.json
-├── eslint.config.mjs
-├── index.js                # Entrypoint
-└── package.json
+  async execute(sock, messageData, args) {
+    // lógica do comando
+  }
+};
 ```
 
-## 🧪 Scripts (package.json)
+## Bancos e persistência
 
-- `npm start` → `node index.js`
-- `npm run dev` → `node --watch index.js`
-- `npm run start:bun` → `bun index.js`
-- `npm run dev:bun` → `bun --watch index.js lib backup`
-- `npm run lint` / `npm run lint:fix` / `npm run lint:check`
+- Os arquivos SQLite são criados automaticamente quando necessário
+- O projeto usa `data/DB` para bancos auxiliares e `DB_PATH` para o banco principal
+- A sessão do WhatsApp pode ser salva em SQLite ou em múltiplos arquivos, conforme `config/config.js`
+- O diretório `databases_repo` é usado pelo sistema de backup GitHub
 
-## 🔐 Segurança
+## Observações importantes
 
-- Não compartilhe `.env`, `data/DB` nem a pasta de sessão (`data/sessions`).
-- Se você usa serviços externos (IA, STT, MercadoPago, etc.), mantenha as chaves somente no `.env`.
-
-## 👤 Autor
-
-**Rei Ayanami** (FuriaDaNoiteBR)  
-GitHub: [@mateusantos24](https://github.com/mateusantos24)
-
-## 📝 Licença
-
-MIT - Sinta-se livre para usar, modificar e compartilhar!
+- O repositório está com muitas mudanças locais em comandos e sistema VIP; este README foi ajustado para refletir essa base atual
+- O README anterior estava com texto corrompido por encoding; este arquivo foi refeito em UTF-8
+- Caso novas categorias, bancos ou serviços sejam adicionados depois, atualize esta documentação para manter os números coerentes
