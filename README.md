@@ -20,6 +20,24 @@
   <img src="https://img.shields.io/badge/suporte-WhatsApp-green?style=flat-square">
 </p>
 
+---
+
+## 📲 Acesso rápido
+
+<p align="center">
+  <a href="https://wa.me/554198277107?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Megumin%20Bot">
+    <img src="https://img.shields.io/badge/💬 Falar com o dono-WhatsApp-25D366?style=for-the-badge&logo=whatsapp">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://chat.whatsapp.com/COb1Z0WZkwV3wZ4jEG0yeK">
+    <img src="https://img.shields.io/badge/👥 Entrar no grupo oficial-Megumin-blue?style=for-the-badge">
+  </a>
+</p>
+
+---
+
 > Este repositório público serve como página de apresentação comercial. O código-fonte completo do Megumin Bot não é distribuído publicamente.
 
 ---
@@ -30,9 +48,9 @@
 
 Este GitHub público serve apenas para:
 
-- apresentar o projeto
-- mostrar informações de compra
-- direcionar o cliente para contato no WhatsApp
+- apresentar o projeto  
+- mostrar informações de compra  
+- direcionar o cliente para contato no WhatsApp  
 
 💰 **Valor atual: R$100 via Pix**
 
