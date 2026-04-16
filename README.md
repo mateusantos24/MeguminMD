@@ -132,33 +132,30 @@ Sistema real rodando em background:
 ## 💎 Sistema de VIP
 
 <p align="center">
-  <img src="https://i.imgur.com/placeholder.png" width="90%">
+  <img src="https://cdn.nexray.web.id/ktz6vprr.jpg" width="90%">
 </p>
 
-Planos disponíveis:
+### Planos disponíveis
+
+<p align="center">
+  <img src="https://cdn.nexray.web.id/i16crlxf.jpg" width="220">
+  <img src="https://cdn.nexray.web.id/g9nb4zkx.jpg" width="220">
+  <img src="https://cdn.nexray.web.id/3hy2a6w6.jpg" width="220">
+</p>
 
 - 🟠 **ELITE** — 3x multiplicador  
-- 🔴 **CRIMINAL MASTERMIND** — 5x  
-- 🟣 **THE BIG ONE** — 8x  
-
-Recursos:
-
-- ✔️ Modo privado  
-- ✔️ Bônus extras  
-- ✔️ Anti-filtro (top plano)  
-- ✔️ Comandos exclusivos  
+- 🔴 **CRIMINAL MASTERMIND** — 5x multiplicador  
+- 🟣 **THE BIG ONE** — 8x multiplicador  
 
 ---
 
-## 📊 Destaques
+### Benefícios VIP
 
-| Métrica        | Valor |
-|----------------|------|
-| Comandos       | 400+ |
-| Categorias     | 16   |
-| Schedulers     | 10+  |
-| APIs integradas| 5+   |
-| Status         | Ativo |
+- ✔️ Modo privado exclusivo  
+- ✔️ Bônus extras de economia  
+- ✔️ Anti-filtro (apenas plano máximo)  
+- ✔️ Comandos exclusivos VIP  
+- ✔️ Prioridade em sistemas e eventos  
 
 ---
 
