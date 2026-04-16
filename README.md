@@ -38,90 +38,105 @@
 
 ---
 
-> Este repositório público serve como página de apresentação comercial. O código-fonte completo do Megumin Bot não é distribuído publicamente.
+> Este repositório público serve como página de apresentação comercial. O código-fonte completo não é distribuído.
 
 ---
 
 ## 📌 Resumo
 
-**Megumin Bot** é um bot privado para WhatsApp com comandos, sistema VIP, automação, economia, moderação e integrações.
-
-Este GitHub público serve apenas para:
-
-- apresentar o projeto  
-- mostrar informações de compra  
-- direcionar o cliente para contato no WhatsApp  
+**Megumin Bot** é um bot privado para WhatsApp com sistema completo de comandos, economia, VIP, automação e integrações.
 
 💰 **Valor atual: R$100 via Pix**
 
 ---
 
-## 🚀 Sobre
+## 🚀 Recursos avançados
 
-O Megumin Bot foi desenvolvido para quem busca um bot robusto, organizado e com muitos recursos para grupos e uso avançado.
+### ⚙️ Sistema de automação (SCHEDULERS)
 
-### Principais recursos:
+Sistema real rodando em background:
 
-- ✅ 400+ comandos organizados por categorias  
-- 💎 Sistema VIP com níveis configuráveis  
-- 🗄️ Banco de dados SQLite com persistência real  
-- ⚙️ Automação e schedulers em background  
-- 🔗 Integrações com Roblox, Brawl Stars, YouTube, Gemini e mais  
-- 🎮 Economia, diversão, moderação e utilidades  
+- ⏱️ Eventos automáticos  
+- 💰 Sistema de banco automático  
+- 🎯 Eventos programados  
+- 📊 Monitoramento de APIs  
+- 🔄 Backups automáticos  
+- 🧠 Cron Scheduler completo  
 
----
-
-## 🎮 Funcionalidades
-
-### 🎯 Games e Diversão
-
-- UNO, Gartic, TicTacToe e Quiz  
-- Figurinhas, memes e comandos criativos  
-- Cards e rankings visuais  
+> Estrutura baseada em múltiplos schedulers reais no projeto
 
 ---
 
-### 💰 Economia e Banco
+### 🎮 Jogos integrados
 
-- Sistema de saldo e progressão  
-- Loja e comandos de economia  
-- Multiplicadores VIP  
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UNO_Logo.svg/3840px-UNO_Logo.svg.png" width="120">
+</p>
 
----
-
-### 💎 VIP Premium
-
-- Planos e permissões exclusivas  
-- Benefícios personalizados  
-- Recursos especiais para usuários VIP  
+- UNO multiplayer completo  
+- Ranking e estatísticas  
+- Sistema de presença em tempo real  
+- Integração com Web Viewer  
 
 ---
 
-### 🛡️ Administração e Moderação
+### ⭐ Integração Brawl Stars
 
-- Anti-link, anti-delete e anti-call  
-- Ferramentas para grupos  
-- Logs e organização de ações  
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/a/a4/Brawl_Stars_iOS_%C3%ADcone.jpg" width="100">
+</p>
 
----
-
-### 🔗 Integrações
-
-- Roblox  
-- Brawl Stars  
-- Clash Royale  
-- YouTube  
-- Google Gemini  
-- Mercado Pago  
+- Perfil completo de jogadores  
+- Rankings globais  
+- Clubes e eventos  
+- APIs externas + dados em tempo real  
+- Renderização visual avançada  
 
 ---
 
-### ⚙️ Automação
+### 🎮 Roblox API
 
-- Rotinas automáticas  
-- Backup local e GitHub  
-- Reinício programado  
-- Notificações em background  
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png" width="140">
+</p>
+
+- Perfil Roblox  
+- Jogos e estatísticas  
+- Avatar e inventário  
+- Histórico de username  
+
+---
+
+### 💰 Pagamentos integrados
+
+<p align="center">
+  <img src="https://logowik.com/content/uploads/images/mercado-pago3162.logowik.com.webp" width="120">
+</p>
+
+- Integração com Mercado Pago  
+- Verificação automática de pagamentos  
+- Sistema VIP automático  
+
+---
+
+## 💎 Sistema de VIP
+
+<p align="center">
+  <img src="https://i.imgur.com/placeholder.png" width="90%">
+</p>
+
+Planos disponíveis:
+
+- 🟠 **ELITE** — 3x multiplicador  
+- 🔴 **CRIMINAL MASTERMIND** — 5x  
+- 🟣 **THE BIG ONE** — 8x  
+
+Recursos:
+
+- ✔️ Modo privado  
+- ✔️ Bônus extras  
+- ✔️ Anti-filtro (top plano)  
+- ✔️ Comandos exclusivos  
 
 ---
 
@@ -131,10 +146,9 @@ O Megumin Bot foi desenvolvido para quem busca um bot robusto, organizado e com 
 |----------------|------|
 | Comandos       | 400+ |
 | Categorias     | 16   |
-| Módulos DB     | 57+  |
-| Schedulers     | 14   |
+| Schedulers     | 10+  |
+| APIs integradas| 5+   |
 | Status         | Ativo |
-| Versão atual   | 3.6.4 |
 
 ---
 
@@ -142,7 +156,7 @@ O Megumin Bot foi desenvolvido para quem busca um bot robusto, organizado e com 
 
 ### 💰 Valor
 
-**Preço via Pix: R$100**
+**R$100 via Pix**
 
 ---
 
