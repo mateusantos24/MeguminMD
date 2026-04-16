@@ -73,24 +73,34 @@ Sistema real rodando em background:
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UNO_Logo.svg/3840px-UNO_Logo.svg.png" width="120">
 </p>
 
-- UNO multiplayer completo  
-- Ranking e estatísticas  
-- Sistema de presença em tempo real  
-- Integração com Web Viewer  
+- 🎲 UNO multiplayer completo  
+- 🏆 Sistema de ranking e estatísticas  
+- 📡 Presença em tempo real  
+- 🌐 Integração com Web Viewer  
 
 ---
 
-### ⭐ Integração Brawl Stars
+### ⭐ Ecossistema Brawl Stars
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/pt/a/a4/Brawl_Stars_iOS_%C3%ADcone.jpg" width="100">
 </p>
 
-- Perfil completo de jogadores  
-- Rankings globais  
-- Clubes e eventos  
-- APIs externas + dados em tempo real  
-- Renderização visual avançada  
+- 👤 Perfil avançado de jogadores  
+- 🏆 Rankings globais e estatísticas detalhadas  
+- 👥 Clubes, histórico e eventos  
+- 🗺️ Mapas ativos em tempo real  
+- 🎨 Renderização visual avançada  
+- 🔄 Integração com múltiplas plataformas do ecossistema  
+
+#### 🔗 Plataformas integradas
+
+- ✅ **Brawl Time Ninja**  
+- ✅ **Brawl Quest**  
+- ✅ **Brawl Tools**  
+- ✅ **BrawlTracker**  
+- ✅ **Brawl Network Rewards**  
+- ✅ **Sport Light Bot**
 
 ---
 
@@ -100,10 +110,10 @@ Sistema real rodando em background:
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png" width="140">
 </p>
 
-- Perfil Roblox  
-- Jogos e estatísticas  
-- Avatar e inventário  
-- Histórico de username  
+- 👤 Perfil completo de usuários  
+- 🎮 Jogos e estatísticas  
+- 🧢 Avatar e inventário  
+- 🕓 Histórico de username  
 
 ---
 
