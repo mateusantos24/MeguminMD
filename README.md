@@ -135,21 +135,19 @@ Sistema real rodando em background:
   <img src="https://cdn.nexray.web.id/ktz6vprr.jpg" width="90%">
 </p>
 
-### Planos disponíveis
+---
+
+### ⭐ Planos disponíveis
 
 <p align="center">
-  <img src="https://cdn.nexray.web.id/i16crlxf.jpg" width="220">
-  <img src="https://cdn.nexray.web.id/g9nb4zkx.jpg" width="220">
-  <img src="https://cdn.nexray.web.id/3hy2a6w6.jpg" width="220">
+  <img src="https://img.shields.io/badge/ELITE-3x-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/CRIMINAL%20MASTERMIND-5x-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/THE%20BIG%20ONE-8x-purple?style=for-the-badge">
 </p>
-
-- 🟠 **ELITE** — 3x multiplicador  
-- 🔴 **CRIMINAL MASTERMIND** — 5x multiplicador  
-- 🟣 **THE BIG ONE** — 8x multiplicador  
 
 ---
 
-### Benefícios VIP
+### 🚀 Benefícios VIP
 
 - ✔️ Modo privado exclusivo  
 - ✔️ Bônus extras de economia  
