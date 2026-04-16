@@ -38,7 +38,7 @@
 
 ---
 
-> Este repositório público serve como página de apresentação comercial. O código-fonte completo não é distribuído.
+> ⚠ Este repositório público serve como página de apresentação comercial. O código-fonte completo não é distribuído.
 
 ---
 
