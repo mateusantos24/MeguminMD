@@ -1,212 +1,182 @@
-# Megumin Bot
+<div align="center">
+  <img src="https://cdn.nexray.web.id/ycnbhhcv.png" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
+</div>
 
-Bot de WhatsApp construído com Baileys, foco em comandos modulares, banco SQLite, automações internas, sistema VIP, integrações externas e utilitários para grupos e conversas privadas.
+<h1 align="center">⚡ Megumin Bot</h1>
 
-## Créditos
+<p align="center">
+  🤖 <b>Bot avançado de WhatsApp com Baileys</b> <br>
+  ⚙️ Modular • SQLite • VIP Premium • Automação • 400+ Comandos
+</p>
 
-Créditos do projeto: **Rei Ayanami**.
+<p align="center">
+  <img src="https://img.shields.io/badge/version-3.6.4-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
+  <img src="https://img.shields.io/badge/acesso-privado-red?style=flat-square">
+  <img src="https://img.shields.io/badge/suporte-WhatsApp-green?style=flat-square">
+</p>
 
-## Estado atual deste repositório
+> 🔒 **Aviso**: Este repositório público serve como apresentação comercial. O código-fonte completo do Megumin Bot não é distribuído publicamente.
 
-Esta revisão foi baseada na estrutura real do código presente hoje no repositório:
+---
 
-- `409` arquivos `.js` dentro de `lib/commands`
-- `16` categorias de comandos: `admin`, `ai`, `casamentos`, `dados`, `diversao`, `dono`, `download`, `economy`, `events`, `games`, `geral`, `sticker`, `supercell`, `utilitarios`, `vip` e `youtube`
-- `53` módulos `.js` em `lib/database`
-- `13` schedulers em `lib/schedulers`
-- `3` handlers principais em `lib/handlers`
+## 📑 Índice
 
-## Novidades da versão 3.4.0
+- [📌 Sobre](#-sobre)
+- [✨ Funcionalidades](#-funcionalidades)
+- [📊 Destaques](#-destaques)
+- [💸 Compra](#-compra)
+- [📲 Contato](#-contato)
+- [❓ Dúvidas Frequentes](#-dúvidas-frequentes)
+- [🛡️ Aviso](#️-aviso)
 
-- Gerenciamento de presence com timeout em `lib/utils/presenceManager.js`, usando `sendWithTimeout(...)` para evitar que atualizações de typing/recording travem comandos
-- Novo comando `/label` para administradores alterarem ou removerem a etiqueta do bot no grupo atual, com validação de entrada e suporte aos modos `auto`, `off` e texto personalizado
-- Novo comando `/newsletters` para inspecionar, depurar e administrar canais/newsletters, incluindo rename, description, reaction e leitura de metadados
-- Novo comando `/story` na categoria `dono` usando os métodos nativos de status/story do socket para texto, imagem, menções e envio para membros de grupos
-- Novo utilitário `lib/utils/eventLogs.js` para centralizar logs de ações e falhas no `EVENTOLOGS`
-- Melhorias em `monitoredDelivery` para fallback, aviso ao dono e tratamento de destinos inválidos
-- Novo utilitário `lib/utils/richTableSender.js` para respostas formatadas com rich table quando a configuração permitir
-- Anti-call refinado com bloqueio temporário automático após `3/3` tentativas dentro da janela configurada
-- Atualização da versão do projeto para `3.4.0` com dependências e scripts alinhados ao estado atual do repositório
+---
 
-## Principais recursos
+## 📌 Sobre
 
-- Carregamento automático de comandos a partir de `lib/commands`
-- Suporte a aliases, cooldown, sugestão de comandos parecidos e filtros por grupo
-- Banco de dados SQLite com compatibilidade para Node.js (`better-sqlite3`) e Bun (`bun:sqlite`)
-- Sessão do WhatsApp via SQLite ou multi-file auth state
-- Hot reload em desenvolvimento
-- Sistema VIP com níveis, regras por comando/categoria e painel dinâmico
-- Schedulers para pagamentos, banco, tempo de grupo, backup, eventos, daily e integrações Supercell
-- Notificador de YouTube com janela de silêncio configurável
-- Integração com Mercado Pago
-- UNO Web com servidor Express próprio
-- Comandos nativos para etiqueta do bot em grupos e publicação de status/story
-- Ferramentas para newsletters, rich tables e monitoramento centralizado de eventos
-- Recursos de segurança, anti-delete, anti-link, anti-call e proteção para grupos
+**Megumin Bot** é um bot de WhatsApp robusto e modular, desenvolvido com foco em desempenho, organização e recursos premium para grupos e uso avançado.
 
-## Arquitetura resumida
+Principais pontos do projeto:
 
-- `index.js`
-  Ponto de entrada do bot. Inicializa diretórios, carrega Baileys, autenticação, handlers, schedulers, serviços e reinício controlado.
+- 400+ comandos organizados por categorias
+- Sistema VIP com níveis configuráveis
+- Banco de dados SQLite com persistência real
+- Schedulers automáticos para tarefas em background
+- Integrações com Roblox, Brawl Stars, YouTube, Gemini e mais
+- Recursos para economia, diversão, moderação, utilidades e personalização
 
-- `lib/handlers/commandHandler.js`
-  Faz o carregamento recursivo dos comandos, normaliza nomes e aliases, aplica cooldown, filtro por categoria, restrições VIP e executa os comandos.
+---
 
-- `lib/handlers/messageHandler.js`
-  Centraliza leitura de mensagens, extração de mídia, proteção, eventos de grupo, menções, anti-delete, estatísticas e despacho para o command handler.
+## ✨ Funcionalidades
 
-- `lib/database/sqlite.js`
-  Camada de abstração para usar SQLite com Node.js ou Bun.
+### 🎮 Games & Diversão
+- UNO, Gartic, TicTacToe, Quiz e interações multiplayer
+- Stickers, memes e comandos criativos
+- Cards e rankings visuais
 
-- `lib/database/vipDB.js`
-  Controla usuários VIP, histórico, regras por feature/comando/categoria e o painel dinâmico do sistema premium.
+### 💰 Economia & Banco
+- Sistema de banco com saldo, ganhos e progressão
+- Loja e comandos de economia
+- Recursos premium com multiplicadores VIP
 
-- `lib/services`
-  Contém integrações de runtime como `youtubeNotifier`, `mercadoPagoService`, `brawlClient` e `unoWebServer`.
+### 👑 VIP Premium
+- Sistema de planos e permissões exclusivas
+- Bypass de filtros em cenários configurados
+- Benefícios personalizados para usuários especiais
 
-- `lib/schedulers`
-  Reúne tarefas automáticas como backup GitHub/local, pagamentos, eventos, daily, banco, YouTube e monitoramento da API do Brawl Stars.
+### 🛡️ Administração & Moderação
+- Anti-link, anti-delete, anti-call e controles automáticos
+- Ferramentas para grupos e gestão de permissões
+- Labels, logs e recursos de organização
 
-## Estrutura principal
+### 🌐 Integrações
+- Roblox
+- Brawl Stars
+- Clash Royale
+- YouTube
+- Google Gemini
+- Mercado Pago
+
+### ⚡ Automação
+- Rotinas automáticas
+- Backup local e GitHub
+- Reinício programado
+- Notificações em background
+
+---
+
+## 📊 Destaques
+
+| Métrica | Valor |
+|---------|-------|
+| Comandos | 400+ |
+| Categorias | 16 |
+| Módulos de DB | 57+ |
+| Schedulers | 14 |
+| Status | Ativo |
+| Versão atual | 3.6.4 |
+
+---
+
+## 💸 Compra
+
+### Valor
+
+**Preço via Pix: R$100**
+
+### Chave Pix
 
 ```text
-.
-├── config/
-├── data/
-├── databases_repo/
-├── lib/
-│   ├── commands/
-│   ├── database/
-│   ├── handlers/
-│   ├── schedulers/
-│   ├── security/
-│   ├── services/
-│   └── utils/
-├── backup.js
-├── index.js
-└── package.json
+58cd74fa-6953-4a3e-ba7b-354a8089b9a6
 ```
 
-## Requisitos
+### Como comprar
 
-- Node.js para produção
-- Bun opcional
-- FFmpeg e FFprobe disponíveis no ambiente
-- Dependências nativas importantes: `better-sqlite3`, `sharp` e `@napi-rs/canvas`
+1. Faça o pagamento via Pix.
+2. Envie o comprovante no WhatsApp.
+3. Informe que comprou o bot.
+4. Aguarde o atendimento e instruções.
 
-## Instalação
+---
 
-### 1. Instalar dependências
+## 📲 Contato
 
-```bash
-npm install
+### WhatsApp do dono
+
+**Número:** `554198277107`
+
+### Link direto
+
+[Abrir no WhatsApp](https://wa.me/554198277107?text=oi%20acabei%20de%20comprei%20bot)
+
+### Link com mensagem completa
+
+[Enviar comprovante e pedir ajuda](https://wa.me/554198277107?text=oi%20acabei%20de%20comprei%20bot%0Apode%20me%20ajudar%3F)
+
+### Mensagem sugerida
+
+```text
+oi acabei de comprei bot
+pode me ajudar?
 ```
 
-Opcional com Bun:
+### Identidade pública
 
-```bash
-bun install
+- GitHub: `mateusantos24`
+- Nome de referência: `Rei Ayanami`
+
+---
+
+## ❓ Dúvidas Frequentes
+
+### O código-fonte é público?
+
+Não. Este GitHub público funciona apenas como página de apresentação e contato.
+
+### O bot está funcionando?
+
+Sim. O projeto está ativo e com backup GitHub configurado.
+
+### O pagamento é somente por Pix?
+
+No momento, este README apresenta **Pix** como forma principal de pagamento.
+
+### Como falar diretamente no WhatsApp?
+
+Use o link abaixo:
+
+```text
+https://wa.me/554198277107?text=oi%20acabei%20de%20comprei%20bot
 ```
 
-### 2. Configurar variáveis de ambiente
+---
 
-Copie `.env.example` para `.env` e ajuste os valores necessários.
+## 🛡️ Aviso
 
-Variáveis importantes já documentadas no projeto:
+- O código do projeto é privado.
+- Este repositório público não representa distribuição livre do bot.
+- Contato, suporte e venda devem ser feitos diretamente pelo WhatsApp informado acima.
 
-- `DB_PATH`
-- `GEMINI_API_KEY`
-- `TENOR_API_KEY`
-- `TMDB_API_KEY`
-- `ASSEMBLYAI_API_KEY`
-- `EVENTOLOGS`
-- `BACKUP_FILTER`
-- `GITHUB_NOTIFIER`
-- `GITHUB_AUTHORNAME`
-- `GITHUB_AUTHOREMAIL`
-- `GITHUB_DELAYHOURS`
-- `GITHUB_RETRYMINUTES`
-- `GITHUB_BACKUP_REMOTE`
-- `MERCADO_PAGO_ACCESS_TOKEN`
+---
 
-Observação: parte das configurações operacionais também fica em `config/config.js`, incluindo prefixos, donos, sessão, manutenção, sistema de botões, anti-call, anti-link, YouTube notifier, registro, UNO Web e mensagens padrão.
-
-## Destaques operacionais
-
-- `/label`
-  Comando administrativo para alterar a etiqueta do bot no grupo atual usando `sock.updateMemberLabel(groupJid, label)`. O projeto valida uso em grupo, limita o texto ao comportamento do WhatsApp e envia monitoramento da ação para `EVENTOLOGS`.
-
-- `/newsletters`
-  Comando administrativo para gerenciamento e debug de canais/newsletters com leitura de metadados, listagem de inscrições, rename, atualização de descrição, reação em mensagens e remoção de foto.
-
-- `/story`
-  Comando da categoria `dono` para publicar status/story com `sendMessage('status@broadcast', ...)`, `sendStatusMentions(...)` e `sendGroupStatus(...)`. Suporta texto, imagem por URL, envio por audiência manual e envio para membros de grupos.
-
-- Etiquetas e histórico
-    expõe `updateMemberLabel`, mas não traz uma listagem simples das etiquetas atuais no `groupMetadata`. Por isso, o projeto mantém histórico em `lib/database/labelDB.js` a partir dos eventos `GROUP_MEMBER_LABEL_CHANGE`.
-
-- Presence
-  O socket suporta `sendPresenceUpdate(...)` e `presenceSubscribe(...)`, e o projeto já inclui o wrapper `lib/utils/presenceManager.js` para controlar `composing`, `recording` e `paused`.
-
-- Rich tables e logs
-  O projeto inclui `lib/utils/richTableSender.js` para respostas em tabela formatada e `lib/utils/eventLogs.js` para concentrar logs operacionais, erros e fallback de envio ao `EVENTOLOGS`.
-
-### 3. Iniciar o bot
-
-```bash
-npm start
-```
-
-Modo desenvolvimento:
-
-```bash
-npm run dev
-```
-
-Com Bun:
-
-```bash
-npm run start:bun
-```
-
-## Scripts disponíveis
-
-- `npm start` inicia o bot com Node.js
-- `npm run dev` inicia com `node --watch`
-- `npm run start:bun` inicia com Bun
-- `npm run dev:bun` inicia em watch mode com Bun
-- `npm run lint` executa o ESLint
-- `npm run lint:fix` corrige problemas automáticos do ESLint
-- `npm run lint:check` falha se houver warnings
-
-## Como os comandos são organizados
-
-Cada comando é exportado como um módulo CommonJS e carregado automaticamente pelo handler.
-
-Exemplo simplificado:
-
-```js
-module.exports = {
-  name: 'ping',
-  description: 'Verificar latência e informações do bot',
-  category: 'utilitarios',
-  aliases: ['latencia', 'p'],
-
-  async execute(sock, messageData, args) {
-    // lógica do comando
-  }
-};
-```
-
-## Bancos e persistência
-
-- Os arquivos SQLite são criados automaticamente quando necessário
-- O projeto usa `data/DB` para bancos auxiliares e `DB_PATH` para o banco principal
-- A sessão do WhatsApp pode ser salva em SQLite ou em múltiplos arquivos, conforme `config/config.js`
-- O diretório `databases_repo` é usado pelo sistema de backup GitHub
-
-## Observações importantes
-
-- O repositório está com muitas mudanças locais em comandos e sistema VIP; este README foi ajustado para refletir essa base atual
-- O README anterior estava com texto corrompido por encoding; este arquivo foi refeito em UTF-8
-- Caso novas categorias, bancos ou serviços sejam adicionados depois, atualize esta documentação para manter os números coerentes
+**Megumin Bot © 2026 - Todos os direitos reservados**
