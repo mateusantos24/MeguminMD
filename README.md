@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="[https://cdn.nexray.web.id/ycnbhhcv.png](https://cdn.nexray.web.id/pb3u2f8a.jpg)" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
+  <img src="[https://cdn.nexray.web.id/pb3u2f8a.jpg]" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
 </div>
 
 <h1 align="center">Megumin Bot</h1>
