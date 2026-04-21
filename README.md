@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.nexray.web.id/ycnbhhcv.png" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
+  <img src="[https://cdn.nexray.web.id/ycnbhhcv.png](https://cdn.nexray.web.id/pb3u2f8a.jpg)" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
 </div>
 
 <h1 align="center">Megumin Bot</h1>
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-3.7.1-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-3.4.0-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/acesso-privado-red?style=flat-square">
   <img src="https://img.shields.io/badge/suporte-WhatsApp-green?style=flat-square">
