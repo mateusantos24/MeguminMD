@@ -51,7 +51,7 @@
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.0.1`
+- **Versão atual:** `4.0.5`
 - **Comandos totais:** `462`
 - **Categorias:** `16`
 - **Schedulers:** `14`
