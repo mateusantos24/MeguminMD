@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.1-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.0.5-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/acesso-privado-red?style=flat-square">
   <img src="https://img.shields.io/badge/suporte-WhatsApp-green?style=flat-square">
