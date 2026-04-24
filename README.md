@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Bot avançado para WhatsApp</b><br>
-  Modular • SQLite • Sistema VIP • Automação • 466 Comandos
+  Modular • SQLite • Sistema VIP • Automação • 461 Comandos
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.6-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.0.7-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -50,8 +50,8 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.0.6`
-- **Comandos totais:** `466`
+- **Versão atual:** `4.0.7`
+- **Comandos totais:** `461`
 - **Categorias:** `16`
 - **Schedulers:** `14`
 - **Handlers:** `3`
@@ -62,6 +62,8 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 - Sistema completo de administração para grupos
 - Jogos como `UNO`, `Gartic`, `Forca`, `Quiz`, `TicTacToe` e `Payday`
+- `Roleta V2` com cor, faixa, paridade e número exato
+- `/steal` reformulado para roubo direto entre usuários
 - Sistema VIP com multiplicadores e benefícios exclusivos
 - Eventos automáticos e bônus especiais de fim de semana
 - Integrações com `Brawl Stars`, `Roblox`, `Mercado Pago`, `YouTube` e mais
@@ -79,11 +81,11 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 | `casamentos` | 20 |
 | `dados` | 26 |
 | `diversao` | 81 |
-| `dono` | 69 |
+| `dono` | 70 |
 | `download` | 23 |
 | `economy` | 8 |
-| `events` | 4 |
-| `games` | 32 |
+| `events` | 5 |
+| `games` | 25 |
 | `geral` | 7 |
 | `sticker` | 14 |
 | `supercell` | 65 |
