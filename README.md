@@ -1,15 +1,12 @@
 <div align="center">
-  <img src="https://cdn.nexray.web.id/pb3u2f8a.jpg"
-       alt="Megumin Bot Logo"
-       width="100%"
-       style="border-radius: 8px; margin: 20px 0;">
+  <img src="https://cdn.nexray.web.id/pb3u2f8a.jpg" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
 </div>
 
 <h1 align="center">Megumin Bot</h1>
 
 <p align="center">
   <b>Bot avançado para WhatsApp</b><br>
-  Modular • SQLite • Sistema VIP • Automação • 462 Comandos
+  Modular • SQLite • Sistema VIP • Automação • 466 Comandos
 </p>
 
 <p align="center">
@@ -17,10 +14,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.5-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.0.6-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
-  <img src="https://img.shields.io/badge/acesso-privado-red?style=flat-square">
-  <img src="https://img.shields.io/badge/suporte-WhatsApp-green?style=flat-square">
+  <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
+  <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
+  <img src="https://img.shields.io/badge/suporte-WhatsApp-25D366?style=flat-square">
 </p>
 
 ---
@@ -29,89 +27,88 @@
 
 <p align="center">
   <a href="https://wa.me/554198277107?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Megumin%20Bot">
-    <img src="https://img.shields.io/badge/💬 Falar com o dono-WhatsApp-25D366?style=for-the-badge&logo=whatsapp">
+    <img src="https://img.shields.io/badge/Falar%20com%20o%20dono-WhatsApp-25D366?style=for-the-badge&logo=whatsapp">
   </a>
 </p>
 
 <p align="center">
   <a href="https://chat.whatsapp.com/COb1Z0WZkwV3wZ4jEG0yeK">
-    <img src="https://img.shields.io/badge/👥 Entrar no grupo oficial-Megumin-blue?style=for-the-badge">
+    <img src="https://img.shields.io/badge/Entrar%20no%20grupo%20oficial-Megumin-blue?style=for-the-badge">
   </a>
 </p>
 
 ---
 
-> ⚠ Este repositório pode ser usado como apresentação comercial e também como referência geral do projeto. Algumas partes do sistema são privadas.
+> ⚠️ Este repositório é uma vitrine pública do projeto. Parte do sistema, integrações internas e arquivos centrais permanecem privados.
 
 ---
 
-## 📌 Resumo
+## 📌 Sobre
 
-**Megumin Bot** é um bot para WhatsApp com sistema completo de comandos, economia, VIP, automação e integrações.
+**Megumin Bot** é um bot para WhatsApp com foco em automação, diversão, economia, VIP e integrações externas.  
+O projeto é modular, rápido de expandir e possui uma base grande de comandos para grupos, administração e entretenimento.
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.0.5`
-- **Comandos totais:** `462`
+- **Versão atual:** `4.0.6`
+- **Comandos totais:** `466`
 - **Categorias:** `16`
 - **Schedulers:** `14`
 - **Handlers:** `3`
-- **Banco principal:** `data/bot_database.sqlite`
-
-💰 **Valor atual: R$100 via Pix**
 
 ---
 
-## 🧩 Categorias e comandos
+## ✨ Destaques
 
-O projeto está organizado por categorias reais dentro de `lib/commands/`.
+- Sistema completo de administração para grupos
+- Jogos como `UNO`, `Gartic`, `Forca`, `Quiz`, `TicTacToe` e `Payday`
+- Sistema VIP com multiplicadores e benefícios exclusivos
+- Eventos automáticos e bônus especiais de fim de semana
+- Integrações com `Brawl Stars`, `Roblox`, `Mercado Pago`, `YouTube` e mais
+- Estrutura com schedulers, automações e banco SQLite
+- Comandos sociais, utilitários, mídia, stickers e economia
+
+---
+
+## 🧩 Categorias de comandos
 
 | Categoria | Qtde |
 |-----------|------|
-| `admin` | 47 |
+| `admin` | 49 |
 | `ai` | 22 |
 | `casamentos` | 20 |
-| `dados` | 27 |
+| `dados` | 26 |
 | `diversao` | 81 |
-| `dono` | 68 |
+| `dono` | 69 |
 | `download` | 23 |
 | `economy` | 8 |
 | `events` | 4 |
-| `games` | 31 |
+| `games` | 32 |
 | `geral` | 7 |
 | `sticker` | 14 |
-| `supercell` | 64 |
+| `supercell` | 65 |
 | `utilitarios` | 27 |
 | `vip` | 12 |
 | `youtube` | 7 |
 
-### Exemplos de áreas cobertas
+### Áreas cobertas
 
 - Administração de grupos
 - IA e respostas inteligentes
-- Casamentos, namoro e interações sociais
-- Dados, utilitários e consultas
-- Jogos multiplayer e minigames
-- Downloads, stickers e mídia
-- Supercell, Roblox e integrações externas
-- Comandos VIP e controle de dono
+- Casamentos e interações sociais
+- Utilitários e consultas
+- Jogos e minigames
+- Economia e ranking
+- Stickers, mídia e downloads
+- Sistemas VIP
+- Comandos de dono
+- Integrações externas
 
 ---
 
-## 🚀 Recursos avançados
+## ⚙️ Sistema de automação
 
-### ⚙️ Sistema de automação (Schedulers)
-
-Sistema real rodando em background:
-
-- ⏱️ Eventos automáticos
-- 💰 Sistema de banco automático
-- 🎯 Eventos programados
-- 📊 Monitoramento de APIs
-- 🔄 Backups automáticos
-- 🧠 Cron Scheduler completo
-
-> Estrutura baseada em múltiplos schedulers reais no projeto
+O bot possui rotinas reais rodando em background para manter o sistema ativo e organizado.
 
 ### Schedulers presentes
 
@@ -132,76 +129,64 @@ Sistema real rodando em background:
 
 ---
 
-### 🎮 Jogos integrados
+## 🎮 Jogos integrados
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UNO_Logo.svg/3840px-UNO_Logo.svg.png" width="120">
-</p>
-
-- 🎲 UNO multiplayer completo
-- 🏆 Sistema de ranking e estatísticas
+- 🎲 UNO multiplayer
+- 🖍️ Gartic
+- 🔤 Forca
+- ❓ Quiz
+- ❌ TicTacToe
+- 🎁 Payday com sistema de caixas
+- 🏆 Ranking e estatísticas
 - 📡 Presença em tempo real
-- 🌐 Integração com Web Viewer
-- 🧩 Gartic, Quiz, Forca e TicTacToe
 
 ---
 
-### ⭐ Ecossistema Brawl Stars
+## ⭐ Ecossistema Brawl Stars
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/pt/a/a4/Brawl_Stars_iOS_%C3%ADcone.jpg" width="100">
-</p>
+- Perfil avançado de jogadores
+- Rankings e estatísticas detalhadas
+- Clubes, histórico e eventos
+- Mapas ativos
+- Renderização visual
+- Integrações com múltiplas plataformas
 
-- 👤 Perfil avançado de jogadores
-- 🏆 Rankings globais e estatísticas detalhadas
-- 👥 Clubes, histórico e eventos
-- 🗺️ Mapas ativos em tempo real
-- 🎨 Renderização visual avançada
-- 🔄 Integração com múltiplas plataformas do ecossistema
+### Plataformas integradas
 
-#### 🔗 Plataformas integradas
-
-- ✅ **Brawl Time Ninja**
-- ✅ **Brawl Quest**
-- ✅ **Brawl Tools**
-- ✅ **BrawlTracker**
-- ✅ **Brawl Network Rewards**
-- ✅ **Sport Light Bot**
+- **Brawl Time Ninja**
+- **Brawl Quest**
+- **Brawl Tools**
+- **BrawlTracker**
+- **Brawl Network Rewards**
+- **Sport Light Bot**
 
 ---
 
-### 🎮 Roblox API
+## 🎮 Roblox API
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png" width="140">
-</p>
-
-- 👤 Perfil completo de usuários
-- 🎮 Jogos e estatísticas
-- 🧢 Avatar e inventário
-- 🕓 Histórico de username
+- Perfil completo de usuários
+- Jogos e estatísticas
+- Avatar e inventário
+- Histórico de username
 
 ---
 
-### 💰 Pagamentos integrados
-
-<p align="center">
-  <img src="https://logowik.com/content/uploads/images/mercado-pago3162.logowik.com.webp" width="120">
-</p>
+## 💰 Pagamentos integrados
 
 - Integração com Mercado Pago
-- Verificação automática de pagamentos
+- Verificação automática
 - Sistema VIP automático
+- Fluxo voltado para venda e ativação
 
 ---
 
-## 💎 Sistema de VIP
+## 💎 Sistema VIP
 
 <p align="center">
   <img src="https://cdn.nexray.web.id/ktz6vprr.jpg" width="90%">
 </p>
 
-### ⭐ Planos disponíveis
+### Planos disponíveis
 
 <p align="center">
   <img src="https://img.shields.io/badge/ELITE-3x-orange?style=for-the-badge">
@@ -209,39 +194,37 @@ Sistema real rodando em background:
   <img src="https://img.shields.io/badge/THE%20BIG%20ONE-8x-purple?style=for-the-badge">
 </p>
 
-### 🚀 Benefícios VIP
+### Benefícios VIP
 
-- ✔️ Modo privado exclusivo
-- ✔️ Bônus extras de economia
-- ✔️ Anti-filtro em níveis superiores
-- ✔️ Comandos exclusivos VIP
-- ✔️ Prioridade em sistemas e eventos
+- Modo privado exclusivo
+- Bônus extras em economia
+- Comandos e vantagens especiais
+- Prioridade em eventos e sistemas
+- Multiplicadores por plano
 
 ---
 
 ## 🚀 Instalação rápida
 
-### 1. Instalar dependências
+### 1. Instale as dependências
 
 ```bash
 npm install
 ```
 
-Se estiver no Windows e a instalação falhar por dependências nativas:
+Se estiver no Windows e houver erro com dependências nativas:
 
 ```bash
 npm install --force
 ```
 
-### 2. Configurar ambiente
+### 2. Configure o ambiente
 
 ```bash
 cp .env.example .env
 ```
 
-Edite o `.env` com suas chaves e configurações.
-
-### 3. Iniciar
+### 3. Inicie o projeto
 
 ```bash
 npm start
@@ -267,12 +250,26 @@ npm run patch:baileys
 
 ## 💸 Compra
 
-### 💰 Valor
+### Valor atual
 
 **R$100 via Pix**
 
-### 🔑 Chave Pix
+### Chave Pix
 
 ```text
 58cd74fa-6953-4a3e-ba7b-354a8089b9a6
 ```
+
+---
+
+## 📩 Contato
+
+- **WhatsApp:** [Clique aqui para conversar](https://wa.me/554198277107?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Megumin%20Bot)
+- **Grupo oficial:** [Entrar no grupo](https://chat.whatsapp.com/COb1Z0WZkwV3wZ4jEG0yeK)
+
+---
+
+## 📄 Licença
+
+Este repositório público serve como apresentação do projeto.  
+O núcleo principal e partes privadas do sistema não estão incluídos aqui.
