@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Bot avançado para WhatsApp</b><br>
-  Modular • SQLite • Sistema VIP • Automação • 461 Comandos
+  Modular • SQLite • Sistema VIP • Automação • 463 Comandos
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.7-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.0.8-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -50,8 +50,8 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.0.7`
-- **Comandos totais:** `461`
+- **Versão atual:** `4.0.8`
+- **Comandos totais:** `463`
 - **Categorias:** `16`
 - **Schedulers:** `14`
 - **Handlers:** `3`
@@ -60,6 +60,7 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ## ✨ Destaques
 
+- **Novidades da 4.0.8:** apoiadores com emblema no perfil, sorteios por reação, lista de banidos do bot e fluxo de cadastro com aprovação por equipe autorizada
 - Sistema completo de administração para grupos
 - Jogos como `UNO`, `Gartic`, `Forca`, `Quiz`, `TicTacToe` e `Payday`
 - `Roleta V2` com cor, faixa, paridade e número exato
@@ -81,7 +82,7 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 | `casamentos` | 20 |
 | `dados` | 26 |
 | `diversao` | 81 |
-| `dono` | 70 |
+| `dono` | 72 |
 | `download` | 23 |
 | `economy` | 8 |
 | `events` | 5 |
