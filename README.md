@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.1.1-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.1.2-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -50,7 +50,7 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.1.1`
+- **Versão atual:** `4.1.0`
 - **Comandos totais:** `481`
 - **Categorias:** `16`
 - **Schedulers:** `14`
