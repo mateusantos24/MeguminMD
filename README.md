@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.nexray.web.id/4sz079ce.jpg" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
+  <img src="https://cdn.nexray.web.id/pb3u2f8a.jpg" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
 </div>
 
 <h1 align="center">Megumin Bot</h1>
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.8-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.1.1-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -50,8 +50,8 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.0.8`
-- **Comandos totais:** `463`
+- **Versão atual:** `4.1.0`
+- **Comandos totais:** `481`
 - **Categorias:** `16`
 - **Schedulers:** `14`
 - **Handlers:** `3`
@@ -60,7 +60,7 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ## ✨ Destaques
 
-- **Novidades da 4.0.8:** apoiadores com emblema no perfil, sorteios por reação, lista de banidos do bot e fluxo de cadastro com aprovação por equipe autorizada
+- **Novidades da 4.1.0:** replay sem prefixo por grupo, FushiReply integrado ao fluxo principal, comandos de IA com Groq e melhorias na estrutura de comandos
 - Sistema completo de administração para grupos
 - Jogos como `UNO`, `Gartic`, `Forca`, `Quiz`, `TicTacToe` e `Payday`
 - `Roleta V2` com cor, faixa, paridade e número exato
@@ -77,19 +77,19 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 | Categoria | Qtde |
 |-----------|------|
-| `admin` | 49 |
-| `ai` | 22 |
+| `admin` | 50 |
+| `ai` | 26 |
 | `casamentos` | 20 |
-| `dados` | 26 |
-| `diversao` | 81 |
-| `dono` | 72 |
-| `download` | 23 |
+| `dados` | 28 |
+| `diversao` | 82 |
+| `dono` | 74 |
+| `download` | 25 |
 | `economy` | 8 |
 | `events` | 5 |
-| `games` | 25 |
+| `games` | 26 |
 | `geral` | 7 |
-| `sticker` | 14 |
-| `supercell` | 65 |
+| `sticker` | 17 |
+| `supercell` | 66 |
 | `utilitarios` | 27 |
 | `vip` | 12 |
 | `youtube` | 7 |
