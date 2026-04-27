@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.1.2-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-4.1.6-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
