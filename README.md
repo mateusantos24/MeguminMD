@@ -50,7 +50,7 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### 📊 Visão geral
 
-- **Versão atual:** `4.1.0`
+- **Versão atual:** `4.1.6`
 - **Comandos totais:** `481`
 - **Categorias:** `16`
 - **Schedulers:** `14`
