@@ -1,0 +1,53 @@
+# Dependências
+node_modules/
+dist/
+package-lock.json
+
+# Sessões
+sessions/
+sessions1/
+sessions2/
+sessions3/
+sessions4/
+data/sessions/
+data/sessions/**
+baileys_store.json
+baileys_store
+
+# Banco de dados locais (SQLite)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Configurações locais
+.env
+.vscode/
+
+# Arquivos de cache e temporários
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+# Arquivos de build ou backups
+backups/
+data/Cache/download/
+data/Cache/sticker/
+data/Cache/games/avatars/
+data/Cache/games/backgrounds/
+
+# managed
+**.data.json
+**.node-persist**
+**_IGNORE_**
+# end managed
+
+.codex
+README.public.md
+
+databases_repo/
+databases_repo/**
+.backup_state.json

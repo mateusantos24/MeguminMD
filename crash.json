@@ -1,0 +1,5 @@
+{
+  "motivo": "uncaughtException: ReferenceError: stopAllSchedulers is not defined",
+  "data": "2026-05-22T06:21:41.163Z",
+  "timestamp": 1779430901163
+}

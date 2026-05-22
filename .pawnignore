@@ -1,0 +1,8 @@
+// Usage: Right click on a file or a folder in your workspace to add into .pawnignore
+// Explanation: This way you'll tell extension not to parse these files for auto-complete and intellisense.  
+// If you are having problems, please report issue at https://github.com/openmultiplayer/vscode-pawn/issues
+
+lib/commands/dono
+lib/commands/ai
+lib/commands/dados
+lib/web/uno
