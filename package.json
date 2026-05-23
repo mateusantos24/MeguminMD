@@ -38,15 +38,14 @@
     "pino": "^8.19.0",
     "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
-    "sharp": "^0.32.1",
-    "twemoji": "^14.0.2",
-    "wa-sticker-formatter": "^4.4.4"
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
     "patch-package": "^8.0.1"
   },
   "optionalDependencies": {
-    "better-sqlite3": "^11.10.0"
+    "better-sqlite3": "^11.10.0",
+    "sharp": "^0.32.1"
   },
   "author": "Rei Ayanami",
   "license": "MIT",
