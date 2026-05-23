@@ -19,7 +19,6 @@
 
 > Este repositório é uma base pública/reservada do Megumin Bot. A versão completa paga não está incluída aqui.
 
-
 ---
 
 ## Acesso rápido
@@ -120,6 +119,27 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 npm install
 cp .env.example .env
 npm start
+```
+
+## Instalação no Termux
+
+> No Termux, instale e rode o bot dentro de `~/MeguminMD`.
+> Não use `/sdcard`, `Download` ou armazenamento compartilhado para rodar `npm install`, porque o Android costuma bloquear symlinks em `node_modules/.bin`.
+
+```bash
+cd ~/MeguminMD
+rm -rf node_modules package-lock.json
+npm install --omit=optional
+npm start
+```
+
+### Abrir no gerenciador de arquivos
+
+Se quiser visualizar a pasta em apps como ZArchiver, MT Manager ou similares, copie apenas os arquivos para `Download`, mas mantenha a instalação real no home do Termux.
+
+```bash
+mkdir -p /storage/emulated/0/Download/MeguminMD
+tar --exclude='node_modules' -cf - -C ~/MeguminMD . | tar -xf - -C /storage/emulated/0/Download/MeguminMD
 ```
 
 ### Scripts úteis
