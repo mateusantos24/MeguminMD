@@ -4,6 +4,7 @@
   "description": "Bot de WhatsApp com Baileys, comandos modulares, SQLite, VIP, sistema de casas, runtime config, monitores Discord/Telegram, schedulers, auto-restart configuravel e integracoes externas",
   "main": "index.js",
   "scripts": {
+    "preinstall": "node lib/utils/checkInstallPath.js",
     "start": "node index.js",
     "start:bun": "bun index.js",
     "dev": "node --watch index.js",
