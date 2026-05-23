@@ -27,6 +27,7 @@ moment.tz.setDefault(activeBotTimezone);
 const fs = require('fs');
 const path = require('path');
 const qrcodeTerminal = require('qrcode-terminal');
+const { detectRuntimeEnvironment } = require('./lib/utils/runtimeEnvironment');
 
 const {
     handleMessageCapUpdate,
@@ -106,6 +107,7 @@ const startupState = {
     startedAt: Date.now(),
     modules: {},
     database: null,
+    runtime: null,
     baileys: {
         module: '',
         version: '',
@@ -193,11 +195,20 @@ function printStartupBanner() {
     const pkg = require('./package.json');
     const line = '='.repeat(56);
     const modeLabel = pm2Enabled ? 'PM2' : 'Local';
+    const runtime = startupState.runtime || { systemLabel: process.platform === 'win32' ? 'Windows' : process.platform, environmentType: 'Desconhecido', hostname: '', deviceLabel: '', detailsLabel: '' };
     console.log(chalk.cyan(line));
     console.log(chalk.magenta.bold(` ${'MEGUMIN BOT v' + pkg.version}`));
     console.log(chalk.cyan(line));
     console.log(formatBootValue('Node.js', process.version, chalk.white));
-    console.log(formatBootValue('Sistema', process.platform === 'win32' ? 'Windows' : process.platform, chalk.white));
+    console.log(formatBootValue('Sistema', runtime.systemLabel, chalk.white));
+    console.log(formatBootValue('Ambiente', runtime.environmentType || 'Desconhecido', chalk.white));
+    console.log(formatBootValue('Host', runtime.hostname || 'N/D', chalk.white));
+    if (runtime.deviceLabel) {
+        console.log(formatBootValue('Device', runtime.deviceLabel, chalk.white));
+    }
+    if (runtime.detailsLabel) {
+        console.log(formatBootValue('Detalhes', runtime.detailsLabel, chalk.gray));
+    }
     console.log(formatBootValue('Timezone', activeBotTimezone, chalk.white));
     console.log(formatBootValue('Banco', 'SQLite', chalk.white));
     console.log(formatBootValue('Modo', modeLabel, chalk.white));
@@ -206,6 +217,7 @@ function printStartupBanner() {
     console.log(chalk.blueBright('[BOOT] Inicializando sistema...\n'));
 }
 
+startupState.runtime = detectRuntimeEnvironment();
 printStartupBanner();
 
 let modulesStatus = {};
