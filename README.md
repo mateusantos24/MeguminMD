@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.nexray.web.id/i82v7c7n.jpg" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
+  <img src="https://files.catbox.moe/m6i8i3.jpeg" alt="Megumin Bot Logo" width="100%" style="border-radius: 8px; margin: 20px 0;">
 </div>
 
 <h1 align="center">Megumin Bot</h1>
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-5.2.0-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-5.6.0-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -41,7 +41,7 @@
 
 > Este repositório é uma vitrine pública do projeto. Parte do sistema, integrações internas e arquivos centrais permanecem privados.
 
-## Atualização 5.2.0
+## Atualização 5.6.0
 
 - Novo sistema de casas com cofre, cobrança automática, invasão e ranking imobiliário
 - Casas pagas em dia agora podem gerar XP diário automático
@@ -56,10 +56,10 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### Visão geral
 
-- **Versão atual:** `5.2.0`
-- **Arquivos de comando:** `543`
+- **Versão atual:** `5.6.0`
+- **Arquivos de comando:** `597`
 - **Categorias:** `16`
-- **Schedulers:** `16`
+- **Schedulers:** `19`
 - **Handlers:** `3`
 
 ## Destaques
@@ -77,20 +77,20 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 | Categoria | Qtde |
 |-----------|------|
-| `admin` | 54 |
-| `ai` | 36 |
+| `admin` | 56 |
+| `ai` | 38 |
 | `casamentos` | 20 |
-| `dados` | 31 |
-| `diversao` | 85 |
-| `dono` | 84 |
+| `dados` | 33 |
+| `diversao` | 87 |
+| `dono` | 91 |
 | `download` | 27 |
-| `economy` | 9 |
+| `economy` | 11 |
 | `events` | 5 |
-| `games` | 50 |
-| `geral` | 7 |
-| `sticker` | 17 |
-| `supercell` | 68 |
-| `utilitarios` | 30 |
+| `games` | 55 |
+| `geral` | 8 |
+| `sticker` | 20 |
+| `supercell` | 76 |
+| `utilitarios` | 32 |
 | `vip` | 13 |
 | `youtube` | 7 |
 
@@ -98,19 +98,22 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 - `antideletedScheduler.js`
 - `bankScheduler.js`
+- `birthdayScheduler.js`
 - `brawlApiStatusScheduler.js`
 - `brawlclubs.js`
 - `brawlnetwork.js`
 - `brawlstars.js`
 - `CronScheduler.js`
+- `clashApiStatusScheduler.js`
 - `dailyScheduler.js`
 - `eventoScheduler.js`
 - `githubschedulers.js`
+- `groupInactivityScheduler.js`
+- `houseScheduler.js`
 - `paymentScheduler.js`
 - `plantarScheduler.js`
 - `robloxApiStatusScheduler.js`
 - `shopScheduler.js`
-- `birthdayScheduler.js`
 - `tempoGPScheduler.js`
 
 ## Instalação rápida
