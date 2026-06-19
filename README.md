@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-5.6.0-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/version-5.2.0-blue?style=flat-square">
   <img src="https://img.shields.io/badge/status-active-success?style=flat-square">
   <img src="https://img.shields.io/badge/publico-github-green?style=flat-square">
   <img src="https://img.shields.io/badge/core-privado-red?style=flat-square">
@@ -43,11 +43,13 @@
 
 ## Atualização 5.6.0
 
-- Novo sistema de casas com cofre, cobrança automática, invasão e ranking imobiliário
-- Casas pagas em dia agora podem gerar XP diário automático
-- Histórico de casa salvo em banco com comandos de consulta para registros recentes
-- Histórico de doações e transferências também salvo em banco
-- Novo aviso manual para grupos configurados com `/avisogp restart <hora>` e `/avisogp off <hora>`
+Detalhes do release 5.6.0:
+
+- **Clash Royale completo:** adicionados `/clashplayer`, `/clashclans`, `/clashdecks`, `/clashchests`, `/clashlog`, `/clashcode` e scheduler de status da API; renderizações em canvas para player profile, clan, battle log, chest cycle e decks.
+- **Exclusão em newsletters/canais:** os comandos `/d` e `/deletar` agora suportam exclusão de mensagens em newsletters/canais usando o `server_id` da mensagem, sem necessidade de referência.
+- **Reações em newsletters:** adicionado suporte para remoção de reações em newsletters via `/canais desreagir`.
+- **YouTube Notifier:** verificação de permissões em newsletters antes de enviar notificações, removendo associações inválidas automaticamente.
+- **Patch Baileys (newsletterDeleteMessage):** incluída função `newsletterDeleteMessage` no pacote `@itsliaaa/baileys` local para suportar exclusão de mensagens em canais.
 
 ## Sobre
 
@@ -56,10 +58,10 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 ### Visão geral
 
-- **Versão atual:** `5.6.0`
-- **Arquivos de comando:** `597`
+- **Versão atual:** `5.2.0`
+- **Arquivos de comando:** `543`
 - **Categorias:** `16`
-- **Schedulers:** `19`
+- **Schedulers:** `16`
 - **Handlers:** `3`
 
 ## Destaques
@@ -77,20 +79,20 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 | Categoria | Qtde |
 |-----------|------|
-| `admin` | 56 |
-| `ai` | 38 |
+| `admin` | 54 |
+| `ai` | 36 |
 | `casamentos` | 20 |
-| `dados` | 33 |
-| `diversao` | 87 |
-| `dono` | 91 |
+| `dados` | 31 |
+| `diversao` | 85 |
+| `dono` | 84 |
 | `download` | 27 |
-| `economy` | 11 |
+| `economy` | 9 |
 | `events` | 5 |
-| `games` | 55 |
-| `geral` | 8 |
-| `sticker` | 20 |
-| `supercell` | 76 |
-| `utilitarios` | 32 |
+| `games` | 50 |
+| `geral` | 7 |
+| `sticker` | 17 |
+| `supercell` | 68 |
+| `utilitarios` | 30 |
 | `vip` | 13 |
 | `youtube` | 7 |
 
@@ -98,22 +100,19 @@ O projeto é modular, rápido de expandir e possui uma base grande de comandos p
 
 - `antideletedScheduler.js`
 - `bankScheduler.js`
-- `birthdayScheduler.js`
 - `brawlApiStatusScheduler.js`
 - `brawlclubs.js`
 - `brawlnetwork.js`
 - `brawlstars.js`
 - `CronScheduler.js`
-- `clashApiStatusScheduler.js`
 - `dailyScheduler.js`
 - `eventoScheduler.js`
 - `githubschedulers.js`
-- `groupInactivityScheduler.js`
-- `houseScheduler.js`
 - `paymentScheduler.js`
 - `plantarScheduler.js`
 - `robloxApiStatusScheduler.js`
 - `shopScheduler.js`
+- `birthdayScheduler.js`
 - `tempoGPScheduler.js`
 
 ## Instalação rápida
