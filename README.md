@@ -29,7 +29,7 @@
     <img src="https://img.shields.io/badge/Falar%20com%20o%20dono-WhatsApp-25D366?style=for-the-badge&logo=whatsapp">
   </a>
   &nbsp;
-  <a href="https://chat.whatsapp.com/COb1Z0WZkwV3wZ4jEG0yeK">
+  <a href="https://chat.whatsapp.com/GVqv7dFXBjcFZ1FmUX7hmX">
     <img src="https://img.shields.io/badge/Entrar%20no%20grupo%20oficial-Megumin-blue?style=for-the-badge">
   </a>
 </p>
