@@ -227,7 +227,15 @@ Parte dos sistemas internos, integrações privadas e recursos avançados perman
 
 ---
 
+<!-- Badge adicional -->
+
+<img src="https://img.shields.io/badge/criado-2021--2026-blueviolet?style=flat-square">
+
+<!-- Rodapé -->
+
 <p align="center">
   Desenvolvido com ❤️ por <b>Rei Ayanami</b><br>
-  Megumin Bot © 2026
+  <b>Megumin Bot © 2021-2026</b><br>
+  Desde 2021 evoluindo e expandindo continuamente.
 </p>
+
